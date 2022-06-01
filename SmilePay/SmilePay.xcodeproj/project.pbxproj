@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2BA2187284621E100E95E75 /* SmilePayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA2186284621E100E95E75 /* SmilePayApp.swift */; };
+		A2BA2189284621E100E95E75 /* AllTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA2188284621E100E95E75 /* AllTransactionsView.swift */; };
+		A2BA218B284621E300E95E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BA218A284621E300E95E75 /* Assets.xcassets */; };
+		A2BA218E284621E300E95E75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BA218D284621E300E95E75 /* Preview Assets.xcassets */; };
+		A2BA2198284621E400E95E75 /* SmilePayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA2197284621E400E95E75 /* SmilePayTests.swift */; };
+		A2BA21A2284621E400E95E75 /* SmilePayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21A1284621E400E95E75 /* SmilePayUITests.swift */; };
+		A2BA21A4284621E400E95E75 /* SmilePayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21A3284621E400E95E75 /* SmilePayUITestsLaunchTests.swift */; };
+		A2BA21B22846262400E95E75 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21B12846262400E95E75 /* Transaction.swift */; };
+		A2BA21B528462AE500E95E75 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21B428462AE500E95E75 /* TransactionsRepository.swift */; };
+		A2BA21B828462EF200E95E75 /* exemple_transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = A2BA21B728462EF200E95E75 /* exemple_transactions.json */; };
+		A2BA21BB2846B77800E95E75 /* AllTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21BA2846B77800E95E75 /* AllTransactionsViewModel.swift */; };
+		A2BA21BE28481C2D00E95E75 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21BD28481C2D00E95E75 /* Helpers.swift */; };
+		A2BA21C028481D0600E95E75 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21BF28481D0600E95E75 /* TransactionViewModel.swift */; };
+		A2BA21C328481F5A00E95E75 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21C228481F5A00E95E75 /* TransactionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2BA2194284621E400E95E75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2BA217B284621E100E95E75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2BA2182284621E100E95E75;
+			remoteInfo = SmilePay;
+		};
+		A2BA219E284621E400E95E75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2BA217B284621E100E95E75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2BA2182284621E100E95E75;
+			remoteInfo = SmilePay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2BA2183284621E100E95E75 /* SmilePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmilePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BA2186284621E100E95E75 /* SmilePayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilePayApp.swift; sourceTree = "<group>"; };
+		A2BA2188284621E100E95E75 /* AllTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsView.swift; sourceTree = "<group>"; };
+		A2BA218A284621E300E95E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2BA218D284621E300E95E75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2BA2193284621E400E95E75 /* SmilePayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmilePayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BA2197284621E400E95E75 /* SmilePayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilePayTests.swift; sourceTree = "<group>"; };
+		A2BA219D284621E400E95E75 /* SmilePayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmilePayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BA21A1284621E400E95E75 /* SmilePayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilePayUITests.swift; sourceTree = "<group>"; };
+		A2BA21A3284621E400E95E75 /* SmilePayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilePayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2BA21B12846262400E95E75 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		A2BA21B428462AE500E95E75 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
+		A2BA21B728462EF200E95E75 /* exemple_transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exemple_transactions.json; sourceTree = "<group>"; };
+		A2BA21BA2846B77800E95E75 /* AllTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsViewModel.swift; sourceTree = "<group>"; };
+		A2BA21BD28481C2D00E95E75 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A2BA21BF28481D0600E95E75 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		A2BA21C228481F5A00E95E75 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2BA2180284621E100E95E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA2190284621E400E95E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA219A284621E400E95E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2BA217A284621E100E95E75 = {
+			isa = PBXGroup;
+			children = (
+				A2BA2185284621E100E95E75 /* SmilePay */,
+				A2BA2196284621E400E95E75 /* SmilePayTests */,
+				A2BA21A0284621E400E95E75 /* SmilePayUITests */,
+				A2BA2184284621E100E95E75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2BA2184284621E100E95E75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA2183284621E100E95E75 /* SmilePay.app */,
+				A2BA2193284621E400E95E75 /* SmilePayTests.xctest */,
+				A2BA219D284621E400E95E75 /* SmilePayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2BA2185284621E100E95E75 /* SmilePay */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21C128481F3900E95E75 /* Views */,
+				A2BA21BC28481C1700E95E75 /* Helpers */,
+				A2BA21B92846B74000E95E75 /* ViewModels */,
+				A2BA21B628462ECB00E95E75 /* Data */,
+				A2BA21B32846299400E95E75 /* Repositories */,
+				A2BA21B02846260400E95E75 /* Models */,
+				A2BA2186284621E100E95E75 /* SmilePayApp.swift */,
+				A2BA218A284621E300E95E75 /* Assets.xcassets */,
+				A2BA218C284621E300E95E75 /* Preview Content */,
+			);
+			path = SmilePay;
+			sourceTree = "<group>";
+		};
+		A2BA218C284621E300E95E75 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA218D284621E300E95E75 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2BA2196284621E400E95E75 /* SmilePayTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA2197284621E400E95E75 /* SmilePayTests.swift */,
+			);
+			path = SmilePayTests;
+			sourceTree = "<group>";
+		};
+		A2BA21A0284621E400E95E75 /* SmilePayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21A1284621E400E95E75 /* SmilePayUITests.swift */,
+				A2BA21A3284621E400E95E75 /* SmilePayUITestsLaunchTests.swift */,
+			);
+			path = SmilePayUITests;
+			sourceTree = "<group>";
+		};
+		A2BA21B02846260400E95E75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21B12846262400E95E75 /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2BA21B32846299400E95E75 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21B428462AE500E95E75 /* TransactionsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A2BA21B628462ECB00E95E75 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21B728462EF200E95E75 /* exemple_transactions.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A2BA21B92846B74000E95E75 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21C42848260300E95E75 /* AllTransactions */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2BA21BC28481C1700E95E75 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21BD28481C2D00E95E75 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A2BA21C128481F3900E95E75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21C52848261200E95E75 /* AllTransactions */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2BA21C42848260300E95E75 /* AllTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21BA2846B77800E95E75 /* AllTransactionsViewModel.swift */,
+				A2BA21BF28481D0600E95E75 /* TransactionViewModel.swift */,
+			);
+			path = AllTransactions;
+			sourceTree = "<group>";
+		};
+		A2BA21C52848261200E95E75 /* AllTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA2188284621E100E95E75 /* AllTransactionsView.swift */,
+				A2BA21C228481F5A00E95E75 /* TransactionView.swift */,
+			);
+			path = AllTransactions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2BA2182284621E100E95E75 /* SmilePay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2BA21A7284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePay" */;
+			buildPhases = (
+				A2BA217F284621E100E95E75 /* Sources */,
+				A2BA2180284621E100E95E75 /* Frameworks */,
+				A2BA2181284621E100E95E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmilePay;
+			productName = SmilePay;
+			productReference = A2BA2183284621E100E95E75 /* SmilePay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2BA2192284621E400E95E75 /* SmilePayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2BA21AA284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePayTests" */;
+			buildPhases = (
+				A2BA218F284621E400E95E75 /* Sources */,
+				A2BA2190284621E400E95E75 /* Frameworks */,
+				A2BA2191284621E400E95E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2BA2195284621E400E95E75 /* PBXTargetDependency */,
+			);
+			name = SmilePayTests;
+			productName = SmilePayTests;
+			productReference = A2BA2193284621E400E95E75 /* SmilePayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2BA219C284621E400E95E75 /* SmilePayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2BA21AD284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePayUITests" */;
+			buildPhases = (
+				A2BA2199284621E400E95E75 /* Sources */,
+				A2BA219A284621E400E95E75 /* Frameworks */,
+				A2BA219B284621E400E95E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2BA219F284621E400E95E75 /* PBXTargetDependency */,
+			);
+			name = SmilePayUITests;
+			productName = SmilePayUITests;
+			productReference = A2BA219D284621E400E95E75 /* SmilePayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2BA217B284621E100E95E75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					A2BA2182284621E100E95E75 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A2BA2192284621E400E95E75 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A2BA2182284621E100E95E75;
+					};
+					A2BA219C284621E400E95E75 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A2BA2182284621E100E95E75;
+					};
+				};
+			};
+			buildConfigurationList = A2BA217E284621E100E95E75 /* Build configuration list for PBXProject "SmilePay" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2BA217A284621E100E95E75;
+			productRefGroup = A2BA2184284621E100E95E75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2BA2182284621E100E95E75 /* SmilePay */,
+				A2BA2192284621E400E95E75 /* SmilePayTests */,
+				A2BA219C284621E400E95E75 /* SmilePayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2BA2181284621E100E95E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BA21B828462EF200E95E75 /* exemple_transactions.json in Resources */,
+				A2BA218E284621E300E95E75 /* Preview Assets.xcassets in Resources */,
+				A2BA218B284621E300E95E75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA2191284621E400E95E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA219B284621E400E95E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2BA217F284621E100E95E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BA21B528462AE500E95E75 /* TransactionsRepository.swift in Sources */,
+				A2BA21C328481F5A00E95E75 /* TransactionView.swift in Sources */,
+				A2BA21BE28481C2D00E95E75 /* Helpers.swift in Sources */,
+				A2BA21BB2846B77800E95E75 /* AllTransactionsViewModel.swift in Sources */,
+				A2BA2189284621E100E95E75 /* AllTransactionsView.swift in Sources */,
+				A2BA2187284621E100E95E75 /* SmilePayApp.swift in Sources */,
+				A2BA21B22846262400E95E75 /* Transaction.swift in Sources */,
+				A2BA21C028481D0600E95E75 /* TransactionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA218F284621E400E95E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BA2198284621E400E95E75 /* SmilePayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2BA2199284621E400E95E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BA21A4284621E400E95E75 /* SmilePayUITestsLaunchTests.swift in Sources */,
+				A2BA21A2284621E400E95E75 /* SmilePayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2BA2195284621E400E95E75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2BA2182284621E100E95E75 /* SmilePay */;
+			targetProxy = A2BA2194284621E400E95E75 /* PBXContainerItemProxy */;
+		};
+		A2BA219F284621E400E95E75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2BA2182284621E100E95E75 /* SmilePay */;
+			targetProxy = A2BA219E284621E400E95E75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2BA21A5284621E400E95E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2BA21A6284621E400E95E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2BA21A8284621E400E95E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmilePay/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2BA21A9284621E400E95E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmilePay/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2BA21AB284621E400E95E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmilePay.app/SmilePay";
+			};
+			name = Debug;
+		};
+		A2BA21AC284621E400E95E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmilePay.app/SmilePay";
+			};
+			name = Release;
+		};
+		A2BA21AE284621E400E95E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmilePay;
+			};
+			name = Debug;
+		};
+		A2BA21AF284621E400E95E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = salmen.SmilePayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmilePay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2BA217E284621E100E95E75 /* Build configuration list for PBXProject "SmilePay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2BA21A5284621E400E95E75 /* Debug */,
+				A2BA21A6284621E400E95E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2BA21A7284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2BA21A8284621E400E95E75 /* Debug */,
+				A2BA21A9284621E400E95E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2BA21AA284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2BA21AB284621E400E95E75 /* Debug */,
+				A2BA21AC284621E400E95E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2BA21AD284621E400E95E75 /* Build configuration list for PBXNativeTarget "SmilePayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2BA21AE284621E400E95E75 /* Debug */,
+				A2BA21AF284621E400E95E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2BA217B284621E100E95E75 /* Project object */;
+}

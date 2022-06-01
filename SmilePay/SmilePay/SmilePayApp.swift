@@ -11,7 +11,18 @@ import SwiftUI
 struct SmilePayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                AllTransactionsView(viewModel: AllTransactionsViewModel(DefaultTransactionsRepository()))
+                    .tabItem {
+                        Label("Transactions", systemImage: "arrow.up.arrow.down.circle")
+                    }
+                
+                Color.yellow
+                    .tabItem {
+                        Label("Récapitulatif", systemImage: "dollarsign.circle")
+                    }
+            }
+            
         }
     }
 }

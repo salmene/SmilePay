@@ -17,7 +17,7 @@ enum TransactionType: String {
     case credit = "crédit"
 }
 
-struct Transaction: Codable {
+struct Transaction: Codable, Hashable {
     let id, datetime,
         amount, type,
         mode, commentaire: String?

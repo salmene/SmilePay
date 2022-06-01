@@ -8,12 +8,12 @@
 import Foundation
 
 protocol TransactionsRepositoryProtocol {
-    func getTransactions(_ result: @escaping (Swift.Result<[Transaction], Error>) -> Void)
+    func getTransactions(page: Int, pageSize: Int, _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void)
 }
 
 final class DefaultTransactionsRepository: TransactionsRepositoryProtocol {
     
-    func getTransactions(_ result: @escaping (Swift.Result<[Transaction], Error>) -> Void) {
+    func getTransactions(page: Int, pageSize: Int = 5, _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void) {
         
         struct ResponseData: Decodable {
             var transactions: [Transaction]
@@ -24,10 +24,26 @@ final class DefaultTransactionsRepository: TransactionsRepositoryProtocol {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(ResponseData.self, from: data)
-                result(.success(jsonData.transactions))
+                let transactions = getDataFor(page, pageSize: pageSize, transactions: jsonData.transactions)
+                result(.success(transactions))
             } catch {
                 result(.failure(error))
             }
         }
+    }
+    
+    private func getDataFor(_ page: Int, pageSize: Int, transactions: [Transaction]) -> [Transaction] {
+        let startIndex = page * pageSize
+        var lastIndex = (pageSize * (page + 1)) - 1
+        if startIndex >= transactions.count {
+            return []
+        } else if lastIndex >= transactions.count {
+            lastIndex = transactions.count - 1
+        }
+        var inRangeTransactions = [Transaction]()
+        for i in startIndex...lastIndex {
+            inRangeTransactions.append(transactions[i])
+        }
+        return inRangeTransactions
     }
 }

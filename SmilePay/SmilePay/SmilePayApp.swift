@@ -17,7 +17,7 @@ struct SmilePayApp: App {
                         Label("Transactions", systemImage: "arrow.up.arrow.down.circle")
                     }
                 
-                Color.yellow
+                RecapView(viewModel: RecapViewModel(DefaultTransactionsRepository()))
                     .tabItem {
                         Label("Récapitulatif", systemImage: "dollarsign.circle")
                     }

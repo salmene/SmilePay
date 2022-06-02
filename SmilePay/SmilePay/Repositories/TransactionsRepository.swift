@@ -8,12 +8,14 @@
 import Foundation
 
 protocol TransactionsRepositoryProtocol {
-    func getTransactions(page: Int, pageSize: Int, _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void)
+    func getTransactions(page: Int, pageSize: Int,
+                         _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void)
 }
 
 final class DefaultTransactionsRepository: TransactionsRepositoryProtocol {
     
-    func getTransactions(page: Int, pageSize: Int = 5, _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void) {
+    func getTransactions(page: Int, pageSize: Int = 5,
+                         _ result: @escaping (Swift.Result<[Transaction], Error>) -> Void) {
         
         struct ResponseData: Decodable {
             var transactions: [Transaction]
@@ -32,7 +34,12 @@ final class DefaultTransactionsRepository: TransactionsRepositoryProtocol {
         }
     }
     
-    private func getDataFor(_ page: Int, pageSize: Int, transactions: [Transaction]) -> [Transaction] {
+    // MARK: This function return data for a given page and size or all data
+    private func getDataFor(_ page: Int, pageSize: Int,
+                            transactions: [Transaction]) -> [Transaction] {
+        guard pageSize > 0 else {
+            return transactions
+        }
         let startIndex = page * pageSize
         var lastIndex = (pageSize * (page + 1)) - 1
         if startIndex >= transactions.count {

@@ -23,6 +23,8 @@
 		A2BA21C328481F5A00E95E75 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21C228481F5A00E95E75 /* TransactionView.swift */; };
 		A2BA21C92848AE0E00E95E75 /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21C82848AE0E00E95E75 /* TransactionDetailsView.swift */; };
 		A2BA21CB2848AED400E95E75 /* TransactionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */; };
+		A2BA21CE2848CC3400E95E75 /* RecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21CD2848CC3400E95E75 /* RecapView.swift */; };
+		A2BA21D12848E2A000E95E75 /* RecapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21D02848E2A000E95E75 /* RecapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		A2BA21C228481F5A00E95E75 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		A2BA21C82848AE0E00E95E75 /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
 		A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewModel.swift; sourceTree = "<group>"; };
+		A2BA21CD2848CC3400E95E75 /* RecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapView.swift; sourceTree = "<group>"; };
+		A2BA21D02848E2A000E95E75 /* RecapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		A2BA21B92846B74000E95E75 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA21CF2848E28A00E95E75 /* Reacap */,
 				A2BA21C72848ADD500E95E75 /* Details */,
 				A2BA21C42848260300E95E75 /* AllTransactions */,
 			);
@@ -194,6 +199,7 @@
 		A2BA21C128481F3900E95E75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA21CC2848CC2000E95E75 /* Recap */,
 				A2BA21C62848ADC500E95E75 /* Details */,
 				A2BA21C52848261200E95E75 /* AllTransactions */,
 			);
@@ -232,6 +238,22 @@
 				A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		A2BA21CC2848CC2000E95E75 /* Recap */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21CD2848CC3400E95E75 /* RecapView.swift */,
+			);
+			path = Recap;
+			sourceTree = "<group>";
+		};
+		A2BA21CF2848E28A00E95E75 /* Reacap */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21D02848E2A000E95E75 /* RecapViewModel.swift */,
+			);
+			path = Reacap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +396,8 @@
 				A2BA2187284621E100E95E75 /* SmilePayApp.swift in Sources */,
 				A2BA21B22846262400E95E75 /* Transaction.swift in Sources */,
 				A2BA21CB2848AED400E95E75 /* TransactionDetailsViewModel.swift in Sources */,
+				A2BA21CE2848CC3400E95E75 /* RecapView.swift in Sources */,
+				A2BA21D12848E2A000E95E75 /* RecapViewModel.swift in Sources */,
 				A2BA21C028481D0600E95E75 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

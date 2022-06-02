@@ -19,7 +19,8 @@ struct AllTransactionsView<ViewModel>: View where ViewModel: AllTransactionsView
                 List {
                     ForEach(viewModel.transactions, id: \.self) { transaction in
                         NavigationLink {
-                            TransactionDetailsView(viewModel: TransactionDetailsViewModel(transaction, deleteAction: {transactionId in
+                            TransactionDetailsView(viewModel: TransactionDetailsViewModel(transaction,
+                                                                                          deleteAction: {transactionId in
                                 viewModel.deleteTransaction(transactionId)
                             }))
                         } label: {
@@ -51,7 +52,8 @@ struct AllTransactionsView<ViewModel>: View where ViewModel: AllTransactionsView
                         Label("sort", systemImage: "gear")
                     }
                     .foregroundColor(Helpers.Ressources.redColor)
-                    .confirmationDialog("Trier par :", isPresented: $showingOptions, titleVisibility: .visible) {
+                    .confirmationDialog("Trier par :", isPresented: $showingOptions,
+                                        titleVisibility: .visible) {
                         Button("Date") {
                             viewModel.sortTransaction(.date)
                         }

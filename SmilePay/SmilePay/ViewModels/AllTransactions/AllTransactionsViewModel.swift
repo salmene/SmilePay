@@ -39,6 +39,7 @@ final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
         fetchData()
     }
     
+    // MARK: This function loads data then update data to be presented and increment page number
     func fetchData() {
         isLoading = true
         sortTransaction(.none)
@@ -65,6 +66,7 @@ final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
         }
     }
     
+    // MARK: This function sort data by the given parameter (amout or date)
     func sortTransaction( _ by: SortMode) {
         sortedBy = by
         switch by {
@@ -89,6 +91,7 @@ final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
         }
     }
     
+    // MARK: This function deletes a transaction by its id and refreshes data
     func deleteTransaction(_ transactionId: String) {
         loadedTransaction.removeAll { transaction in
             guard let tranID = transaction.id else {

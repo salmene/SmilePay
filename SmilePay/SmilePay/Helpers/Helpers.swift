@@ -15,6 +15,7 @@ class Helpers {
         static let redColor = Color(red: 243.0/244.0, green: 62.0/244.0, blue: 62.0/244.0)
     }
     
+    // MARK: This function returns a string presenting the date as dd-MM-yyyy (HH:mm)
     static func getDateString(_ date: Date?) -> String {
         guard let date = date else { return "" }
         let dateFormatter = DateFormatter()

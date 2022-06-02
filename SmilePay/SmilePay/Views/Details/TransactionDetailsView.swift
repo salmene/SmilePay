@@ -45,7 +45,8 @@ struct TransactionDetailsView<ViewModel>: View where ViewModel: TransactionDetai
                     Label("delete", systemImage: "trash")
                 }
                 .foregroundColor(Helpers.Ressources.redColor)
-                .confirmationDialog("Êtes-vous sûr de vouloir supprimer cette transaction ?", isPresented: $showingOptions, titleVisibility: .visible) {
+                .confirmationDialog("Êtes-vous sûr de vouloir supprimer cette transaction ?",
+                                    isPresented: $showingOptions, titleVisibility: .visible) {
                     Button("Oui") {
                         if let transactionId = viewModel.transaction.id {
                             viewModel.deleteAction?(transactionId)

@@ -21,6 +21,8 @@
 		A2BA21BE28481C2D00E95E75 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21BD28481C2D00E95E75 /* Helpers.swift */; };
 		A2BA21C028481D0600E95E75 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21BF28481D0600E95E75 /* TransactionViewModel.swift */; };
 		A2BA21C328481F5A00E95E75 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21C228481F5A00E95E75 /* TransactionView.swift */; };
+		A2BA21C92848AE0E00E95E75 /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21C82848AE0E00E95E75 /* TransactionDetailsView.swift */; };
+		A2BA21CB2848AED400E95E75 /* TransactionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		A2BA21BD28481C2D00E95E75 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A2BA21BF28481D0600E95E75 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		A2BA21C228481F5A00E95E75 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		A2BA21C82848AE0E00E95E75 /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
+		A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		A2BA21B92846B74000E95E75 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA21C72848ADD500E95E75 /* Details */,
 				A2BA21C42848260300E95E75 /* AllTransactions */,
 			);
 			path = ViewModels;
@@ -189,6 +194,7 @@
 		A2BA21C128481F3900E95E75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA21C62848ADC500E95E75 /* Details */,
 				A2BA21C52848261200E95E75 /* AllTransactions */,
 			);
 			path = Views;
@@ -210,6 +216,22 @@
 				A2BA21C228481F5A00E95E75 /* TransactionView.swift */,
 			);
 			path = AllTransactions;
+			sourceTree = "<group>";
+		};
+		A2BA21C62848ADC500E95E75 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21C82848AE0E00E95E75 /* TransactionDetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		A2BA21C72848ADD500E95E75 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA21CA2848AED400E95E75 /* TransactionDetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,10 +368,12 @@
 				A2BA21B528462AE500E95E75 /* TransactionsRepository.swift in Sources */,
 				A2BA21C328481F5A00E95E75 /* TransactionView.swift in Sources */,
 				A2BA21BE28481C2D00E95E75 /* Helpers.swift in Sources */,
+				A2BA21C92848AE0E00E95E75 /* TransactionDetailsView.swift in Sources */,
 				A2BA21BB2846B77800E95E75 /* AllTransactionsViewModel.swift in Sources */,
 				A2BA2189284621E100E95E75 /* AllTransactionsView.swift in Sources */,
 				A2BA2187284621E100E95E75 /* SmilePayApp.swift in Sources */,
 				A2BA21B22846262400E95E75 /* Transaction.swift in Sources */,
+				A2BA21CB2848AED400E95E75 /* TransactionDetailsViewModel.swift in Sources */,
 				A2BA21C028481D0600E95E75 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

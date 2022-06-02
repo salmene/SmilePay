@@ -20,6 +20,7 @@ protocol AllTransactionsViewModelProtocol: ObservableObject {
     var didLoadAllData: Bool { get }
     func fetchData()
     func sortTransaction( _ by: SortMode)
+    func deleteTransaction(_ transactionId: String)
 }
 
 final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
@@ -40,6 +41,7 @@ final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
     
     func fetchData() {
         isLoading = true
+        sortTransaction(.none)
         repository.getTransactions(page: page, pageSize: 5) {[weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
@@ -85,7 +87,22 @@ final class AllTransactionsViewModel: AllTransactionsViewModelProtocol {
         case .none:
             transactions = loadedTransaction
         }
+    }
+    
+    func deleteTransaction(_ transactionId: String) {
+        loadedTransaction.removeAll { transaction in
+            guard let tranID = transaction.id else {
+                return false
+            }
+            return tranID == transactionId
+        }
         
+        transactions.removeAll { transaction in
+            guard let tranID = transaction.id else {
+                return false
+            }
+            return tranID == transactionId
+        }
     }
     
 }

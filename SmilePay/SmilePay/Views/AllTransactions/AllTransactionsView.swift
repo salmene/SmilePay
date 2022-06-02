@@ -13,44 +13,53 @@ struct AllTransactionsView<ViewModel>: View where ViewModel: AllTransactionsView
     @State private var showingOptions = false
     
     var body: some View {
-        ZStack {
-            VStack {
-                
-                
-                Button("Trier") {
-                    showingOptions = true
-                }
-                .foregroundColor(Helpers.Ressources.redColor)
-                .confirmationDialog("Trier par :", isPresented: $showingOptions, titleVisibility: .visible) {
-                    Button("Date") {
-                        viewModel.sortTransaction(.date)
-                    }
-                    Button("Montant") {
-                        viewModel.sortTransaction(.amount)
-                    }
-                }
-                
+        NavigationView {
+            ZStack {
                 
                 List {
                     ForEach(viewModel.transactions, id: \.self) { transaction in
-                        if transaction == viewModel.transactions.last && !viewModel.didLoadAllData && !viewModel.isLoading {
-                            TransactionView(viewModel: TransactionViewModel(transaction))
-                                .onAppear {
-                                    viewModel.fetchData()
-                                }
-                        } else {
-                            TransactionView(viewModel: TransactionViewModel(transaction))
+                        NavigationLink {
+                            TransactionDetailsView(viewModel: TransactionDetailsViewModel(transaction, deleteAction: {transactionId in
+                                viewModel.deleteTransaction(transactionId)
+                            }))
+                        } label: {
+                            if transaction == viewModel.transactions.last && !viewModel.didLoadAllData && !viewModel.isLoading {
+                                TransactionView(viewModel: TransactionViewModel(transaction))
+                                    .onAppear {
+                                        viewModel.fetchData()
+                                    }
+                            } else {
+                                TransactionView(viewModel: TransactionViewModel(transaction))
+                            }
                         }
                     }
                 }
                 
-                
+                if viewModel.isLoading {
+                    ProgressView()
+                        .tint(Helpers.Ressources.redColor)
+                        .frame(alignment: .center)
+                }
             }
-            
-            if viewModel.isLoading {
-                ProgressView()
-                    .tint(Helpers.Ressources.redColor)
-                    .frame(alignment: .center)
+            .navigationTitle("Toutes les transactions")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showingOptions = true
+                    }) {
+                        Label("sort", systemImage: "gear")
+                    }
+                    .foregroundColor(Helpers.Ressources.redColor)
+                    .confirmationDialog("Trier par :", isPresented: $showingOptions, titleVisibility: .visible) {
+                        Button("Date") {
+                            viewModel.sortTransaction(.date)
+                        }
+                        Button("Montant") {
+                            viewModel.sortTransaction(.amount)
+                        }
+                    }
+                }
             }
         }
     }
